@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="badlb_logo.ico" type="image/x-icon">
+  <title>Bad Luck Brian</title>
+ <style>
+  .menu {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+  }
+
+  .logo {
+    margin-right: 15px;
+  }
+
+  .logo img {
+    height: 70px; /* Adjust the height as needed */
+  }
+
+  button {
+    border: none;
+    background: none;
+    font-size: 26px; /* Adjust the font size as needed */
+    cursor: pointer;
+    transition: color 0.3s;
+    color: #ffffff
+  }
+
+  button:hover {
+    color: #8a90ff; /* Adjust the highlight color as needed */
+  }
+  
+  body {
+    overflow-x: hidden;
+    background-color: #7b86b8;
+    color: #ffffff;
+    font-size: 26px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+	line-height: 1.4;
+    text-shadow: -1px -1px 1px #000, 
+                  1px -1px 1px #000, 
+                  -1px 1px 1px #000, 
+                  1px 1px 1px #000; /* Add text-shadow for outer stroke */
+  }
+
+  .container {
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section {
+    margin-bottom: 40px;
+  }
+
+  .section .title {
+    text-align: center;
+    vertical-align: top;
+  }
+
+  .seperator {
+    width: 100vw;
+    height: 8px;
+    background-color: #ffffff;
+    margin-left: -50vw;
+    position: relative;
+    left: 50%;
+	box-shadow: 0 0px 20px rgba(255, 255, 255, 1)
+  }
+  
+    .menu_seperator {
+    width: 100vw;
+    height: 1px;
+    background-color: #000;
+    margin-left: -50vw;
+    position: relative;
+    left: 50%;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  }
+
+  .section1 .container {
+    display: flex;
+    align-items: center; /* Update align-items to center */
+  }
+
+  .section2 .container {
+    display: flex;
+    align-items: flex-start; /* Update align-items to flex-start */
+  }
+
+  .section1 .container .left,
+  .section2 .container .left {
+    width: 560px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section1 .container .left img,
+  .section2 .container .left img {
+    width: 400px;
+    display: block;
+    margin: 0 auto;
+    align-self: center;
+  }
+
+  .section1 .container .right {
+    width: calc(100% - 560px);
+  }
+
+  .section2 .container .right {
+    width: calc(100% - 560px);
+    align-items: flex-start; /* Update align-items to flex-start */
+  }
+
+  .section3 .table {
+    width: 1200px;
+    margin: 0 auto;
+    border-collapse: separate; /* Set border-collapse to separate */
+    border-spacing: 40px 0; /* Add spacing between cells */
+  }
+
+  .section3 .table th,
+  .section3 .table td {
+    padding: 10px;
+    border: 1px solid #000;
+	background-color: rgba(0, 0, 0, 0.15);
+  }
+
+  .section3 .table th {
+    text-align: center;
+    vertical-align: top;
+    font-size: 36px;
+	border-bottom: none;
+	border-radius: 40px 40px 0 0
+  }
+
+  .section3 .table td {
+    vertical-align: top;
+	border-radius: 0 0 40px 40px
+	
+  }
+
+  .section4 .panel {
+    width: 1200px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    border: 1px solid #000;
+	border-radius: 40px;
+	background-color: rgba(0, 0, 0, 0.15);
+  }
+
+  .section4 .panel .left {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .section4 .panel .left img {
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+    vertical-align: middle;
+  }
+
+  .section4 .panel:last-child .left img {
+    width: 350px;
+  }
+
+  .section4 .panel .right {
+    width: calc(100% - 350px);
+  }
+
+  .section5 {
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 64px;
+  }
+
+  h3 {
+    font-size: 36px;
+    text-shadow: -1px -1px 1px #000, 
+                  1px -1px 1px #000, 
+                  -1px 1px 1px #000, 
+                  1px 1px 1px #000; /* Add text-shadow for outer stroke */
+  }
+  
+  .mail{
+  color:#8a90ff;
+  }
+  
+</style>
+
+</head>
+<body>
+  <div class="menu">
+  <div class="logo">
+    <img src="badlb_logo.png" alt="Logo" />
+  </div>
+    <p style="margin-right: 50px; color: #8a90ff; font-weight: bold; font-style: italic; font-family:  Arial, Helvetica, sans-serif;">BADLB</p>
+    <button style="margin-right: 20px;" onclick="scrollToSection('section1')">About</button>
+    <button style="margin-right: 20px;" onclick="scrollToSection('section2')">Tokenomics</button>
+    <button style="margin-right: 20px;" onclick="scrollToSection('section3')">Roadmap</button>
+    <button style="margin-right: 20px;" onclick="scrollToSection('section4')">How to buy</button>
+    <button onclick="scrollToSection('section5')">Join Us</button>
+  </div>
+  <div style="margin-top: 20px;" class="menu_seperator"></div> 
+  
+  <div class="container">
+    <div id="section1" class="section section1">
+      <h2 class="title">About</h2>
+      <div class="container">
+        <div class="left">
+          <img src="blb_tokenomics.png" alt="Picture 1" width="400">
+        </div>
+        <div class="right">
+          <p>Are you also someone who bought Bitcoin right before the 2021 crash? Or put your savings in Terra's Luna? Then you might be just like our idol Bad Luck Brian. 
+		If you are affiliated with memes then you probably know who we are talking about. If not, no worries you can still get to know him through our new crypto token: 
+		Bad Luck Brian (BADLB) is a new crypto meme project developed by our small startup team to brighten you up in your boring everyday moments or 
+		when things just doesn't really turn out the way you wanted to.
+		The token launched on the Binance Smart Chain (BSC) with no presale actions and no taxes.</p>
+        </div>
+      </div>
+    </div>
+	
+	<div class="seperator"></div>  
+  
+    <div id="section2" class="section section2">
+      <h2 class="title">Tokenomics</h2>
+
+      <div class="container">
+        <div class="left">
+          <img src="badlb_tokenomics.png" alt="Picture 2" width="400">
+        </div>
+        <div class="right">
+          <h3 style="display: flex; align-items: flex-start; justify-content: center; text-align: left;">Token supply: 420,420,420,420</h3>
+		<p>95.8% of the tokens will be allocated to a Liquidity Pool.
+		The remaining 4.2% is held by a multisig wallet for project funding i.e.: 
+		Centralised EXchange listings, liquidity pools and other upcoming expenses during the expansion of the project.
+		This wallet is easily trackable with BscScan or with similar tools.</p>
+        </div>
+      </div>
+    </div>
+	
+	<div class="seperator"></div>  
+    
+    <div id="section3" class="section section3">
+      <h2 class="title">Roadmap</h2>
+      <table class="table">
+        <tr>
+          <th>Phase I</th>
+          <th>Phase II</th>
+          <th>Phase III</th>
+        </tr>
+        <tr>
+          <td>
+            <ul>
+              <li>Launch</li>
+              <li>CoinMarketCap listing</li>
+              <li>DEFI listings</li>
+			  <li>Hiring colleagues</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+            <li>Social media presence</li>
+            <li>Newsletter</li>
+			<li>Discord server launch</li>
+            <li>1000+ HODLers</li>
+            <li>CEX listings</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+            <li>New use-cases</li>
+            <li>10000+ HODLers</li>
+            <li>Holder priviliges like voting for major decisions</li>
+            <li>Merch / NFT</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </div>
+	
+	<div class="seperator"></div>  
+    
+    <div id="section4" class="section section4">
+      <h2 class="title">How to buy</h2>
+      <div class="panel">
+        <div class="left">
+          <img src="mm_logo.png" alt="Picture 3" width="200">
+        </div>
+        <div class="right">
+          <h3>Create a wallet</h3>
+          <p>Download metamask or your wallet of choice from the app store or google play store for free. 
+	   Desktop users, download the google chrome extension by going to metamask.io</p>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="left">
+          <img src="bnb_logo.png" alt="Picture 4" width="200">
+        </div>
+        <div class="right">
+          <h3>Get some BNB</h3>
+          <p>Have BNB in your wallet to swap to BADLB. 
+		If you don’t have any BNB, you can buy directly on metamask, transfer from another wallet or buy on another exchange and send it to your wallet.</p>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="left">
+          <img src="cake_logo.png" alt="Picture 5" width="200">
+        </div>
+        <div class="right">
+          <h3>Go to Pancakeswap</h3>
+          <p>Go to pancakeswap.finance in google chrome or on the browser inside your Metamask app. Connect your wallet.
+		Paste the BADLB token address, select BADLB, and confirm. When Metamask prompts you for a wallet signature, sign it.</p>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="left">
+          <img src="badlb_switch.png" alt="Picture 6" width="350">
+        </div>
+        <div class="right">
+          <h3>Swap BNB for BADLB</h3>
+          <p>Swap BNB for BADLB. 
+		We have ZERO taxes so you don’t need to worry about buying with a specific slippage, although you may need to use slippage during times of market volatility.</p>
+        </div>
+      </div>
+    </div>
+
+	<div class="seperator"></div>  
+
+  <div id="section5" id="section5" class="section">
+    <h2 class="title">Join Us</h2>
+	<p>Are you a skilled individual who want to participate in improving our project? Then here is your chance. Our open positions:</p>
+    <ul class="list">
+      <li>
+        <h3>Blockchain developer:</h3>
+		  <ul class="list">
+            <li>Part-time / Contractor</li>
+            <li>Solidity / Python familiarity</li>
+			<li>Understanding of Crypto and Smart Contracts</li>
+		  </ul>
+      </li>
+      <li>
+        <h3>Social media specialist:</h3>
+          <ul class="list">
+            <li>Part-time / Contractor</li>
+            <li>Twitter account and Discord server maintenance knowledge because we are socially awkward just like Brian</li>
+			<li>Passionate about social media and good interpersonal skills</li>
+		  </ul>
+      </li>
+      <li>
+        <h3>Website developer:</h3>
+          <ul class="list">
+            <li>Contractor</li>
+            <li>Should be able to put up a better website than what we did :D Yeah it's not really a high expectation we know.</li>
+		  </ul>
+      </li>
+    </ul>
+	<p style="margin-top: 40px;">You can apply to the open positions with sending an e-mail to: <span class="mail">badlbtoken@gmail.com</span></br>
+	  Make sure not to miss writing down your qualifications and the desired job type like Brian did.</p>
+  </div>
+  
+    <div style="margin-top: 20px;" class="seperator"></div> 
+	  <div style="margin-top: 40px; font-size: 20px; justify-content: center; text-align: center;" id="section5" id="section5" class="section">
+	    BADLB token and the developer team has no association with Kyle Edward Craven or as you probably know him "Bad Luck Brian". This token is simply paying homage to a meme we all love and recognize.
+      </div>
+  </div>
+   <script>
+    function scrollToSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+</body>
+</html>
